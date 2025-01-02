@@ -1,0 +1,21 @@
+name: Cp
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome Message
+        uses: actions/checkout@v4 
+      - name: Repo Information
+        run: |
+         git branch
+         git log
+         git -v
+      

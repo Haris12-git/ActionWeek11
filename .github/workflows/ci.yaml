@@ -15,7 +15,12 @@ jobs:
         uses: actions/checkout@v4 
       - name: Repo Information
         run: |
-         git branch
-         git log
-         git -v
+          echo "Repo info"
+          echo "Repository Name :${{github.repository}}"
+          echo "Repository Owner :${{github.owner}}"
+          echo "Event :: :${{github.event_name}}"
+          git branch
+          git log
+          git -v
+          git config --local --list
       
